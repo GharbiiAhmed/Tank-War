@@ -1,0 +1,99 @@
+// This file is generated. Do not modify by hand.
+// XML documentation file not found. To check if public methods have XML comments,
+// make sure the XML doc file is present and located next to the scraped dll
+public class IronSourceDependenciesManager : UnityEditor.EditorWindow
+{
+    public IronSourceDependenciesManager() {}
+    public static void ShowISDependenciesManager();
+    [System.Obsolete(@"ProviderInfo has been deprecated without an equivalent API.")] public class ProviderInfo
+    {
+        [System.Obsolete(@"currentStatues has been deprecated without an equivalent API.")] public IronSourceDependenciesManager.ProviderInfo.Status currentStatues;
+        [System.Obsolete(@"currentUnityVersion has been deprecated without an equivalent API.")] public string currentUnityVersion = @"none";
+        [System.Obsolete(@"displayProviderName has been deprecated without an equivalent API.")] public string displayProviderName;
+        [System.Obsolete(@"downloadURL has been deprecated without an equivalent API.")] public string downloadURL;
+        [System.Obsolete(@"fileName has been deprecated without an equivalent API.")] public string fileName;
+        [System.Obsolete(@"isNewProvider has been deprecated without an equivalent API.")] public bool isNewProvider = false;
+        [System.Obsolete(@"latestUnityAdsVersion has been deprecated without an equivalent API.")] public string latestUnityAdsVersion;
+        [System.Obsolete(@"latestUnityVersion has been deprecated without an equivalent API.")] public string latestUnityVersion;
+        [System.Obsolete(@"providerName has been deprecated without an equivalent API.")] public string providerName;
+        [System.Obsolete(@"sdkVersionDic has been deprecated without an equivalent API.")] public System.Collections.Generic.Dictionary<string, string> sdkVersionDic;
+        [System.Obsolete(@"ProviderInfo has been deprecated without an equivalent API.")] public ProviderInfo() {}
+        [System.Obsolete(@"SetProviderDataProperties has been deprecated without an equivalent API.")] public bool SetProviderDataProperties(string provider, System.Collections.Generic.Dictionary<string, object> providerData, System.Collections.Generic.Dictionary<string, object> providerXML);
+        [System.Obsolete(@"Status has been deprecated without an equivalent API.")] public enum Status
+        {
+            INSTALLED = 1,
+            NONE = 2,
+            UPDATED = 3,
+        }
+    }
+}
+
+public static class IronSourceDependenciesManagerConstants
+{
+}
+
+public class IronSourceEditorCoroutines
+{
+    public static IronSourceEditorCoroutines StartEditorCoroutine(System.Collections.IEnumerator routine);
+    public void StopEditorCoroutine();
+}
+
+public class IronSourceManifestProcessor : UnityEditor.Build.IOrderedCallback, UnityEditor.Build.IPreprocessBuildWithReport
+{
+    public int callbackOrder { get; }
+    public IronSourceManifestProcessor() {}
+    public void OnPreprocessBuild(UnityEditor.Build.Reporting.BuildReport report);
+}
+
+public class IronSourceMediatedNetworkSettings : UnityEngine.ScriptableObject
+{
+    [UnityEngine.SerializeField] [UnityEngine.Tooltip(@"This Will be added to your AndroidManifest.xml")] public string AdmobAndroidAppId;
+    [UnityEngine.SerializeField] [UnityEngine.Tooltip(@"This will be added to your info.plist")] public string AdmobIOSAppId;
+    [UnityEngine.Header(@"")] [UnityEngine.Header(@"AdMob Integration")] [UnityEngine.SerializeField] [UnityEngine.Tooltip(@"This will add AdMob Application ID to AndroidManifest.xml/info.plist")] public bool EnableAdmob = false;
+    public static readonly string MEDIATION_SETTINGS_ASSET_PATH;
+    public IronSourceMediatedNetworkSettings() {}
+}
+
+[UnityEditor.CustomEditor(typeof(IronSourceMediatedNetworkSettings))] public class IronSourceMediatedNetworkSettingsInspector : UnityEditor.Editor
+{
+    public static IronSourceMediatedNetworkSettings IronSourceMediatedNetworkSettings { get; }
+    public IronSourceMediatedNetworkSettingsInspector() {}
+}
+
+[UnityEditor.CustomEditor(typeof(IronSourceMediationSettings))] public class IronSourceMediationSettingsInspector : UnityEditor.Editor
+{
+    public static IronSourceMediationSettings IronSourceMediationSettings { get; }
+    public IronSourceMediationSettingsInspector() {}
+}
+
+public class IronSourceMenu : UnityEditor.Editor
+{
+    public IronSourceMenu() {}
+    [UnityEditor.MenuItem(@"Ads Mediation/SDK Change Log", false, 1)] public static void ChangeLog();
+    [UnityEditor.MenuItem(@"Ads Mediation/Documentation", false, 0)] public static void Documentation();
+    [UnityEditor.MenuItem(@"Ads Mediation/Developer Settings/Mediated Network Settings", false, 4)] public static void mediatedNetworkSettings();
+    [UnityEditor.MenuItem(@"Ads Mediation/Developer Settings/LevelPlay Mediation Settings", false, 3)] public static void mediationSettings();
+    [UnityEditor.MenuItem(@"Ads Mediation/Network Manager", false, 2)] public static void SdkManagerProd();
+    [UnityEditor.MenuItem(@"Ads Mediation/Troubleshooting", false, 5)] public static void TroubleShootingGuide();
+}
+
+namespace IronSource.Editor
+{
+    public interface IAdapterSettings
+    {
+        public void updateProject(UnityEditor.BuildTarget buildTarget, string projectPath);
+        public void updateProjectPlist(UnityEditor.BuildTarget buildTarget, string plistPath);
+    }
+}
+
+namespace Unity.Services.LevelPlay.Editor
+{
+    public static class EnvironmentVariables
+    {
+    }
+
+    public struct LevelPlayIdentifier : Unity.Services.Core.Editor.IEditorGameServiceIdentifier
+    {
+        public string GetKey();
+    }
+}

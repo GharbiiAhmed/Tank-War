@@ -1,0 +1,20 @@
+{
+    "ErrorExceptions": [
+        {
+            "ValidationTest": "Manifest Validation",
+            "ExceptionMessage": "In package.json, \"documentationUrl\" can't be used for Unity packages.  It is a features reserved for enterprise customers.  The Unity documentation team will ensure the package's documentation is published in the appropriate fashion",
+            "PackageVersion": "8.2.0"
+        },
+        {
+            "ValidationTest": "Package Lifecycle Validation",
+            "ExceptionMessage": "There is no previous Pre-Release version of this package available. By Lifecycle V2 rules, the first Pre-Release iteration of a new version needs to be approved and promoted by Release Management. Please contact Release Management to promote your package. Read more about this error and potential solutions at https://docs.unity3d.com/Packages/com.unity.package-validation-suite@latest/index.html?preview=1&subfolder=/manual/lifecycle_validation_error.html#previous-version-of-this-package-is-not-a-pre-release-version",
+            "PackageVersion": "8.2.0"
+        },
+        {
+            "ValidationTest": "API Validation",
+            "ExceptionMessage": "Assembly \"LevelPlay.Installer.Editor\" no longer exists or is no longer included in build. This change requires a new major version.",
+            "PackageVersion": "8.2.0"
+        }
+    ],
+    "WarningExceptions": []
+}
